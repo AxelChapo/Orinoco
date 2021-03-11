@@ -20,26 +20,40 @@
 	padding: 20px;
 }
 
-.item {
+#cameraPreview {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.item {
+	width: 500px;
+	height: 350px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-around;
+	background-color: white;
+	box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+	padding: 1em;
+	margin: 40px;
 	&__preview {
-		margin: 40px;
+		width: 90%;
+		height: 90%;
 	}
 }
 
 .description {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
+	flex-direction: column;
+	align-items: start;
+	justify-content: flex-start;
 	font-family: 'Arial', serif;
-	font-color: black;
 	margin-top: 5px;
+	color: black;
 	&__nom {
-
+		font-weight: bold;
 	}
 	&__prix {
 

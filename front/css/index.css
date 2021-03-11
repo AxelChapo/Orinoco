@@ -1,17 +1,23 @@
 html, body {
   margin: 0;
-  background-color: #e0fcfc; }
+  background-color: #f9f0f9; }
 
-a {
-  text-decoration: none; }
-
-img, p {
-  margin: 0; }
+body {
+  position: relative;
+  min-height: calc(100vh - 105px);
+  padding-bottom: 105px; }
 
 header, footer {
   background-color: #f3eaf1;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  height: 105px; }
+
+img, p {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
 
 #presentation {
   font-family: 'Caveat', cursive; }
@@ -23,7 +29,10 @@ header {
 
 footer {
   justify-content: center;
-  box-shadow: 0px -3px 7px 1px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px -3px 7px 1px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
 
 #basket {
   background-color: #bbbcc6;
@@ -55,27 +64,62 @@ footer {
   margin: 50px 0 50px 0;
   padding: 20px; }
 
-.item {
+#cameraPreview {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap; }
+
+.item {
+  width: 500px;
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  margin: 40px; }
   .item__preview {
-    margin: 40px; }
+    width: 90%;
+    height: 90%; }
 
 .description {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
   font-family: 'Arial', serif;
-  font-color: black;
-  margin-top: 5px; }
+  margin-top: 5px;
+  color: black; }
+  .description__nom {
+    font-weight: bold; }
 
 #separation {
   width: 80%;
   height: 0px;
   border: 2px black solid;
   margin-bottom: 50px; }
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 3%; }
+  .product__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5%; }
+    .product__description--img {
+      width: 500px; }
+    .product__description--data {
+      flex-direction: column;
+      justify-content: space-between; }
+    .product__description--title {
+      font-weight: bold; }
+    .product__description--txt {
+      text-align: justify; }
 
 /*# sourceMappingURL=index.css.map */

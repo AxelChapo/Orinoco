@@ -1,0 +1,25 @@
+.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 3%;
+	&__description {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 5%;
+		&--img {
+			width: 500px;
+		}
+		&--data {
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		&--title {
+			font-weight: bold;
+		}
+		&--txt {
+			text-align: justify;
+		}
+	}
+}

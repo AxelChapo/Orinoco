@@ -1,18 +1,25 @@
 html, body {
 	margin: 0;
-	background-color: rgb(224, 252, 252);
+	background-color: rgb(249, 240, 249);
 }
 
-a {
-	text-decoration: none;
-}
-
-img, p {
-	margin: 0;
+body {
+	position: relative;
+	min-height: calc(100vh - 105px);
+	padding-bottom: 105px;
 }
 
 header, footer {
 	background-color: rgb(243, 234, 241);
 	display: flex;
 	align-items: center;
+	height: 105px;
+}
+
+img, p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
 }
