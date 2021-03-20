@@ -17,30 +17,19 @@
 	<div class="body">
 		<div class="product">
 			<div class="product__description">
-				<div class="product__description--img">
-					<img src="../API/images/vcam_1.png" alt="image du produit">
+				<div class="product__description--img" id="img">
 				</div>
-				<div class="product__description--data">
-					<div class="product__description--title">
-						<p>Nom du produit</p>
-						<p>Prix du produit</p>
+				<div class="desc">
+					<div class="product__description--data" id="data">
 					</div>
 					<div class="product__description--select">
-						<label for="lens-select">Type de lentille:</label>
-						<select name="lens" id="lens-select">
-							<option value="">Choisir le type</option>
-							<option value="1">valeur 1</option>
-							<option value="2">valeur 2</option>
-							<option value="3">valeur 3</option>
-							<option value="4">valeur 4</option>
-							<option value="5">valeur 5</option>
-						</select>
+						<label for="lens-select">Type de lentille</label>
+						<select name="lens" id="lens-select"></select>
 					</div>
-					<button class="product__description--cart">Ajouter au panier</button>
+					<button class="product__description--cart" id="cart">Ajouter au panier</button>
+					<div class="product__description--txt" id="txt">
+					</div>
 				</div>
-			</div>
-			<div class="product__description--txt">
-				<p>Description du produit</p>
 			</div>
 		</div>
 	</div>
@@ -48,5 +37,6 @@
 		<a href="../index.html" class="logo"><img src="../API/images/logo_1_2.png" alt="Logo Orinoco - CAM"></a>
 	</footer>
 	<script src="./js/merch.js"></script>
+	<script src="./js/cart.js"></script>
 </body>
 </html>

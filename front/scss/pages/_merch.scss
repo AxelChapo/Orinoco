@@ -6,20 +6,37 @@
 	&__description {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: start;
 		margin-bottom: 5%;
-		&--img {
+		&--img img {
 			width: 500px;
 		}
 		&--data {
+			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: start;
 		}
 		&--title {
 			font-weight: bold;
+			margin: 1%
+		}
+		&--price {
+			margin: 1%;
 		}
 		&--txt {
 			text-align: justify;
+			margin: 1%;
+		}
+		&--cart {
+			width: 30%;
+			margin: 1%;
 		}
 	}
+}
+
+.desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	padding-left: 7%;
 }

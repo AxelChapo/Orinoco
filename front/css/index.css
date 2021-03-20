@@ -99,7 +99,7 @@ footer {
   text-align: left; }
 
 .price {
-  font-size: 1em;
+  font-size: 1.2em;
   text-align: right; }
 
 .description {
@@ -127,16 +127,30 @@ footer {
   .product__description {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: start;
     margin-bottom: 5%; }
-    .product__description--img {
+    .product__description--img img {
       width: 500px; }
     .product__description--data {
+      display: flex;
       flex-direction: column;
-      justify-content: space-between; }
+      justify-content: start; }
     .product__description--title {
-      font-weight: bold; }
+      font-weight: bold;
+      margin: 1%; }
+    .product__description--price {
+      margin: 1%; }
     .product__description--txt {
-      text-align: justify; }
+      text-align: justify;
+      margin: 1%; }
+    .product__description--cart {
+      width: 30%;
+      margin: 1%; }
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-left: 7%; }
 
 /*# sourceMappingURL=index.css.map */
