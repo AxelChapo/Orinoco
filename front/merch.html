@@ -7,7 +7,7 @@
 	<script src="https://kit.fontawesome.com/a33496f3bb.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="./css/index.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>
@@ -17,14 +17,24 @@
 	<div class="body">
 		<div class="product">
 			<div class="product__description">
-				<div class="product__description--img" id="img">
+				<div class="product__description--img" >
+					<img alt="photo de l'appareil" id="img">
 				</div>
 				<div class="desc">
 					<div class="product__description--data" id="data">
+						<p class="product__description--title"></p>
+						<p></p>
 					</div>
 					<div class="product__description--select">
-						<label for="lens-select">Type de lentille</label>
-						<select name="lens" id="lens-select"></select>
+						<label for="lens-select">Type de lentille:</label>
+						<select name="lens" id="lens-select">
+						</select>
+					</div>
+					<div class="product__description--quantity">
+						<label for="quantity">Quantité de produit (max 15):</label>
+						<button class="product__description--quantity" id="qMinus">-</button>
+						<input type="number" id="quantity" name="quantity" min="1" max="15" value="1">
+						<button class="product__description--quantity" id="qPlus">+</button>
 					</div>
 					<button class="product__description--cart" id="cart">Ajouter au panier</button>
 					<div class="product__description--txt" id="txt">
@@ -37,6 +47,5 @@
 		<a href="../index.html" class="logo"><img src="../API/images/logo_1_2.png" alt="Logo Orinoco - CAM"></a>
 	</footer>
 	<script src="./js/merch.js"></script>
-	<script src="./js/cart.js"></script>
 </body>
 </html>
