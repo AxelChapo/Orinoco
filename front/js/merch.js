@@ -55,18 +55,28 @@ fetch('http://localhost:3000/api/cameras/'+id).then(result => result.json()).the
 				lens: lensElt.value,
 				id: camera._id,
 				img: camera.imageUrl,
-				price: (camera.price / 100) * quantityElt.value,
-				quantity: quantityElt.value,
+				price: (camera.price / 100),
+				quantity: parseInt(quantityElt.value),
 			}]));
 		} else {
-			cart.push({
-				name: camera.name,
-				lens: lensElt.value,
-				id: camera._id,
-				img: camera.imageUrl,
-				price: (camera.price / 100) * quantityElt.value,
-				quantity: quantityElt.value,
-			});
+			let cameraInCart = false;
+			cart.forEach((article, i) => {
+				console.log(article.lens, lensElt.value);
+				if (article.id == camera._id && article.lens == lensElt.value) {
+					cart[i].quantity += parseInt(quantityElt.value);
+					cameraInCart = true;
+				}
+			})	
+			if (!cameraInCart) {
+				cart.push({
+					name: camera.name,
+					lens: lensElt.value,
+					id: camera._id,
+					img: camera.imageUrl,
+					price: (camera.price / 100),
+					quantity: parseInt(quantityElt.value),
+				});
+			}
 			localStorage.setItem('cart', JSON.stringify(cart));
 		}
 	})

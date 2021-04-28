@@ -53,3 +53,68 @@
 		}
 	}
 }
+
+.dampedCart {
+	font-size: 1.5em;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+	&__customer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: stretch;
+	}
+	&__field {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 1%;
+		&--valid {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&--valid input {
+			width: 25%;
+		}
+		&--valid label {
+			overflow-wrap: break-word;
+			font-size: 1em;
+		}
+	}
+	&__field input {
+		width: 75%;
+	}
+
+}
+
+.form h3 {
+	margin-bottom: 1%;
+}
+
+.form__field:valid input {
+	border-color: green;
+	border-radius: 5% 5%;
+}
+
+.form__field:invalid input {
+	border-color: red;
+	border-radius: 5% 5%;
+}
+
+.emptyCart {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 5%;
+	&--button {
+		width: 15%;
+		font-size: 1.2em;
+	}
+}
