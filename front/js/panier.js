@@ -26,10 +26,42 @@ else {
 }
 
 let deleteElt = document.getElementById('empty');
+console.log(cart);
+if (cart.length == 0) {
+	deleteElt.setAttribute("hidden", "");
+}
 deleteElt.addEventListener('click', event => {
 	localStorage.removeItem('cart');
 	cartElt.innerHTML = "<h4 class='dampedCart'>Votre panier est vide.</h4>"
 })
+
+let nameElt = document.getElementById('name');
+function validateName(name) {
+	const reName = /[\w^0-9]/;
+	return reName.test(name);
+}
+
+function validate() {
+	const name = $("name").val();
+
+	if (validateName(name)) {
+		nameElt.style.borderColor = "#2eb52a";
+	}
+	else {
+		nameElt.style.borderColor = "#db1f1f";
+	}
+}
+nameElt.addEventListener('input', event => {
+	validateName();
+	validate();
+})
+
+if (nameElt === /[\w^0-9]/) {
+	nameElt.style.bordercolor = "#3bb82a";
+}
+else {
+	nameElt.style.bordercolor = "#db1f1f";
+}
 
 let submitElt = document.getElementById('submit');
 submitElt.addEventListener("click", event => {
@@ -40,5 +72,3 @@ submitElt.addEventListener("click", event => {
 	//3- faire la requête post (envoyer l'objet id camera et contact)
 	//4- récupérer une réponse (liste des produits, n° de commande)
 })
-
-let 

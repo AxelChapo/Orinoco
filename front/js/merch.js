@@ -44,6 +44,9 @@ fetch('http://localhost:3000/api/cameras/'+id).then(result => result.json()).the
 		lensElt.innerHTML += `<option value="${lens}">${lens}</option>`
 	})
 	//gestion du boutton ajouter au panier
+	let itemCountElt = document.getElementById('itemCount');
+	let itemCount = 0;
+	itemCountElt.innerHTML = itemCount;
 	let buttonElt = document.getElementById('cart');
 	buttonElt.addEventListener('click', event => {
 		console.log(camera, lensElt);
@@ -58,7 +61,10 @@ fetch('http://localhost:3000/api/cameras/'+id).then(result => result.json()).the
 				price: (camera.price / 100),
 				quantity: parseInt(quantityElt.value),
 			}]));
-		} else {
+			itemCount ++;
+			itemCountElt.innerHTML = itemCount;
+		} 
+		else {
 			let cameraInCart = false;
 			cart.forEach((article, i) => {
 				console.log(article.lens, lensElt.value);
@@ -78,6 +84,8 @@ fetch('http://localhost:3000/api/cameras/'+id).then(result => result.json()).the
 				});
 			}
 			localStorage.setItem('cart', JSON.stringify(cart));
+			itemCount ++;
+			itemCountElt.innerHTML = itemCount;
 		}
 	})
 })
