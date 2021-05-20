@@ -46,7 +46,8 @@ fetch('http://localhost:3000/api/cameras/'+id).then(result => result.json()).the
 	//gestion du boutton ajouter au panier
 	let itemCountElt = document.getElementById('itemCount');
 	let itemCount = 0;
-	itemCountElt.innerHTML = itemCount;
+	itemCountElt.textContent = itemCount;
+
 	let buttonElt = document.getElementById('cart');
 	buttonElt.addEventListener('click', event => {
 		console.log(camera, lensElt);
