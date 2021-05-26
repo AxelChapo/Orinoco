@@ -74,7 +74,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.5em;
+	font-size: 1.3em;
 	&__customer {
 		display: flex;
 		flex-direction: column;
@@ -104,6 +104,9 @@
 		border: 2px solid rgba(0, 0, 0, 0.3);
 		border-radius: 5px;
 		box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.2);
+	}
+	&__field label {
+		max-width: 85px;
 	}
 
 }
