@@ -6,21 +6,29 @@ let id = params.get('id');
 let quantityElt = document.getElementById('quantity');
 let qMinusElt = document.getElementById('qMinus');
 let qPlusElt = document.getElementById('qPlus');
-qMinusElt.addEventListener('click', event => {
+
+let quantityMinus = () => {
 	if (quantityElt.value > quantityElt.min) {
 		quantityElt.value --;
 	}
 	else {
 		quantityElt.value = quantityElt.min;
 	}
+}
+qMinusElt.addEventListener('click', event => {
+	quantityMinus();
 })
-qPlusElt.addEventListener('click', event => {
+
+let quantityPlus = () => {
 	if (parseInt(quantityElt.value) < parseInt(quantityElt.max)) {
 		quantityElt.value ++;
 	}
 	else {
 		quantityElt.value = quantityElt.max;
 	}
+}
+qPlusElt.addEventListener('click', event => {
+	quantityPlus();
 })
 
 //appel de l'API pour récupérer les données de la caméra
@@ -46,7 +54,7 @@ fetch('http://localhost:3000/api/cameras/'+id).then(result => result.json()).the
 				cart[i].quantity += parseInt(quantityElt.value);
 				cameraInCart = true;
 			}
-		})	
+		})
 		if (!cameraInCart) {
 			cart.push({
 				name: camera.name,
@@ -60,5 +68,4 @@ fetch('http://localhost:3000/api/cameras/'+id).then(result => result.json()).the
 		localStorage.setItem('cart', JSON.stringify(cart));
 		itemCountElt.textContent = cart.length;
 	})
-})
-
+});
